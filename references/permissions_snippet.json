@@ -1,0 +1,25 @@
+{
+  "_comment": "Merge these into the \"allow\" array under \"permissions\" in ~/.claude/settings.local.json. If you already have a permissions.allow array, add these entries to it rather than replacing the file.",
+  "permissions": {
+    "allow": [
+      "Bash(xvfb-run openscad *)",
+      "Bash(*openscad*)",
+      "Bash(bash render_*)",
+      "Bash(./render_*)",
+      "Bash(bash export_stl*)",
+      "Bash(./export_stl*)",
+      "Bash(chmod +x *.sh)"
+    ],
+    "_optional_for_real_slicer_verification": [
+      "Bash(./tools/slice_check.sh *)",
+      "Bash(bash tools/slice_check.sh *)",
+      "Bash(*orca-slicer*)",
+      "Bash(*.AppImage*)",
+      "Bash(ldd *)",
+      "Bash(dpkg-deb *)",
+      "Bash(apt-get -o *)",
+      "Bash(pkill -f orca-slicer*)",
+      "Bash(timeout * xvfb-run *)"
+    ]
+  }
+}
